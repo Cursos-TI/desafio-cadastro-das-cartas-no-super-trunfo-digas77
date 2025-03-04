@@ -1,52 +1,52 @@
 #include <stdio.h>
 
 int main() {
-    char pais[20];
-    char estado[20];
-    char nome[20];
-    char codigo;
-    int populacao;
-    int pontos;
-    float pib;
-    float area;
+    int pais, estado, cidade, pontos, opcao;
+    float populacao, area, pib;
 
-    printf("--- Super Trunfo Países ---\n\n\n");
 
-    //---País---
-    printf("País: \n");
-    scanf("%s", &pais);
+    printf("Bem-Vindo ao jogo Super Trunfo!!\n\n");
+    printf("1 - Jogar\n");
+    printf("2 - Regras\n");
+    printf("3 - Sair\n");
+    printf("Escolha uma opção: \n");
+    scanf("%d", &opcao);
 
-    //---Estado---
-    printf("Nome do Estado: \n");
-    scanf("%s", &estado);
+    switch (opcao)
+    {
+    case 1:
+        printf("Digite o País: \n");
+        scanf("%d", &pais);
+        printf("Digite o Estado: \n");
+        scanf("%d", &estado);
+        printf("Digite a Cidade: \n");
+        scanf("%d", &cidade);
+        printf("População: \n");
+        scanf("%f", &populacao);
+        printf("Qual a área: \n");
+        scanf("%f", &area);
+        printf("Qual o PIB: \n");
+        scanf("%f", &pib);
+        printf("Quantos pontos turísticos: \n");
+        scanf("%d", &pontos);
+            break;
+    case 2:
+        printf("Regras do Jogo Super Trunfo: \n\n");
+        printf("1- Preencha todos os Campos para nós lhe ajudar a saber qual carta é a melhor!\n");
+        printf("2- O código da carta é a primeira letra do Estado com o número da carta. Ex: Paraná, São josé dos Pinhais (P02)\n");
+        printf("3- Jogue para se divertir!\n\n");
+        printf("Obrigado!!");
+            break;
+    case 3:
+        printf("Saindo do Jogo, Obrigado!\n");
+            break;
+    default:
+        printf("Opção inválida!\n");
+            break;
+        }
     
-    //---Nome Da Cidade---
-    printf("Nome da Cidade: \n");
-    scanf("%s", &nome);
 
-    //---Código da Carta(com a inicial da estado e numeração da cidade)EX: P02---
-    printf("Código da carta: \n");
-    scanf("%s", &codigo);
 
-    //---População---
-    printf("População: \n");
-    scanf("%d", &populacao);
-
-    //---Pontos Turísticos---
-    printf("Pontos Turísticos: \n");
-    scanf("%d", &pontos);
-
-    //---Pib---
-    printf("Pib: \n");
-    scanf("%f", &pib);
-
-    //---Área---
-    printf("Área da Cidade: \n");
-    scanf("%d", &area);
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
     return 0;
 }
